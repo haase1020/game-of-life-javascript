@@ -1,7 +1,7 @@
 var rows = 75;
 var cols = 75;
 
-var playing = false;
+let playing = false;
 let timer;
 let reproductionTime = 100;
 
@@ -41,17 +41,17 @@ function initialize() {
 
 // layout grid
 function createTable() {
-  var gridContainer = document.getElementById('gridContainer');
+  const gridContainer = document.getElementById('gridContainer');
   if (!gridContainer) {
     //error message
     console.error('Error: no div for the grid table');
   }
-  var table = document.createElement('table');
+  const table = document.createElement('table');
 
-  for (var i = 0; i < rows; i++) {
-    var tr = document.createElement('tr');
-    for (var j = 0; j < cols; j++) {
-      var cell = document.createElement('td');
+  for (let i = 0; i < rows; i++) {
+    const tr = document.createElement('tr');
+    for (let j = 0; j < cols; j++) {
+      const cell = document.createElement('td');
       cell.setAttribute('id', i + '_' + j);
       cell.setAttribute('class', 'dead');
       cell.onclick = cellClickHandler;
@@ -66,7 +66,7 @@ function cellClickHandler() {
   const rowcol = this.id.split('_');
   const row = rowcol[0];
   const col = rowcol[1];
-  var classes = this.getAttribute('class');
+  const classes = this.getAttribute('class');
   if (classes.indexOf('live') > -1) {
     this.setAttribute('class', 'dead');
     grid[row][col] = 0;
@@ -90,15 +90,15 @@ function updateView() {
 }
 function setupControlButtons() {
   //button to start game
-  var startButton = document.getElementById('start');
+  const startButton = document.getElementById('start');
   startButton.onclick = startButtonHandler;
 
   //button to clear grid
-  var clearButton = document.getElementById('clear');
+  const clearButton = document.getElementById('clear');
   clearButton.onclick = clearButtonHandler;
 
   //button to set random initial state
-  var randomButton = document.getElementById('random');
+  const randomButton = document.getElementById('random');
   randomButton.onclick = randomButtonHandler;
 }
 
@@ -120,7 +120,7 @@ function randomButtonHandler() {
 function clearButtonHandler() {
   console.log('clear the game: stop playing and clear the grid');
   playing: false;
-  var startButton = document.getElementById('start');
+  const startButton = document.getElementById('start');
   startButton.innerHTML = 'start';
 
   clearTimeout(timer);
