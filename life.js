@@ -3,9 +3,29 @@ var cols = 25;
 
 var playing = false;
 
+const grid = new Array(rows);
+const nextGrid = new Array(rows);
+
+function initializeGrids() {
+  for (let i = 0; i < rows; i++) {
+    grid[i] = new Array(cols);
+    nextGrid[i] = new Array(cols);
+  }
+}
+function resetGrids() {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      grid[i][j] = 0;
+      nextGrid[i][j] = 0;
+    }
+  }
+}
+
 //initialize
 function initialize() {
   createTable();
+  initializeGrids();
+  resetGrids();
   setupControlButtons();
 }
 
@@ -33,11 +53,16 @@ function createTable() {
 }
 
 function cellClickHandler() {
+  const rowcol = this.id.split('_');
+  const row = rowcol[0];
+  const col = rowcol[1];
   var classes = this.getAttribute('class');
   if (classes.indexOf('live') > -1) {
     this.setAttribute('class', 'dead');
+    grid[row][col] = 0;
   } else {
     this.setAttribute('class', 'live');
+    grid[row][col] = 1;
   }
 }
 
