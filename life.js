@@ -3,7 +3,7 @@ var cols = 75;
 
 let playing = false;
 let timer;
-let reproductionTime = 100;
+let reproductionTime = 500;
 
 const grid = new Array(rows);
 const nextGrid = new Array(rows);
@@ -100,6 +100,24 @@ function setupControlButtons() {
   //button to set random initial state
   const randomButton = document.getElementById('random');
   randomButton.onclick = randomButtonHandler;
+
+  //button to increase speed
+  const speedupButton = document.getElementById('speedup');
+  speedupButton.onclick = speedupButtonHandler;
+
+  //button to decrease speed
+  const slowdownButton = document.getElementById('slowdown');
+  slowdownButton.onclick = slowdownButtonHandler;
+}
+
+function speedupButtonHandler() {
+  console.log('increase speed by 100 increments');
+  reproductionTime -= 100;
+}
+
+function slowdownButtonHandler() {
+  console.log('decrease speed by 100 increments');
+  reproductionTime += 100;
 }
 
 function randomButtonHandler() {
