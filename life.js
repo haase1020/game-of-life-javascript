@@ -88,6 +88,7 @@ function updateView() {
     }
   }
 }
+
 function setupControlButtons() {
   //button to start game
   const startButton = document.getElementById('start');
@@ -108,6 +109,16 @@ function setupControlButtons() {
   //button to decrease speed
   const slowdownButton = document.getElementById('slowdown');
   slowdownButton.onclick = slowdownButtonHandler;
+
+  //button to increase overall grid size
+  const increaseButton = document.getElementById('increase');
+  increaseButton.onclick = increaseButtonHandler;
+}
+
+function increaseButtonHandler() {
+  console.log('increase overall by 10 increments rows and cols');
+  rows += 10;
+  cols += 10;
 }
 
 function speedupButtonHandler() {
