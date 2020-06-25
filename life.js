@@ -1,5 +1,5 @@
-var rows = 75;
-var cols = 75;
+var rows = 50;
+var cols = 50;
 
 let playing = false;
 let timer;
@@ -8,6 +8,7 @@ let reproductionTime = 500;
 const grid = new Array(rows);
 const nextGrid = new Array(rows);
 
+console.log(cols);
 function initializeGrids() {
   for (let i = 0; i < rows; i++) {
     grid[i] = new Array(cols);
@@ -89,6 +90,15 @@ function updateView() {
   }
 }
 
+function changeGridSize() {
+  const heightInput = document.getElementById('height');
+  heightInput.onclick = heightInputHandler;
+}
+
+function heightInputHandler() {
+  console.log('change grid height');
+}
+
 function setupControlButtons() {
   //button to start game
   const startButton = document.getElementById('start');
@@ -109,16 +119,6 @@ function setupControlButtons() {
   //button to decrease speed
   const slowdownButton = document.getElementById('slowdown');
   slowdownButton.onclick = slowdownButtonHandler;
-
-  //button to increase overall grid size
-  const increaseButton = document.getElementById('increase');
-  increaseButton.onclick = increaseButtonHandler;
-}
-
-function increaseButtonHandler() {
-  console.log('increase overall by 10 increments rows and cols');
-  rows += 10;
-  cols += 10;
 }
 
 function speedupButtonHandler() {
@@ -178,6 +178,7 @@ function startButtonHandler() {
     play();
   }
 }
+
 function play() {
   console.log('play the game');
   computeNextGen();

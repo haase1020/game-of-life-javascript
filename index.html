@@ -6,16 +6,31 @@
     <link rel="stylesheet" href="life.css" />
   </head>
   <body>
-    <div id="gridContainer"></div>
-
+    <!-- startup form to select grid size -->
+    <div id="startWrapper">
+      <div id="gridContainer">
+        <form id="gridheight">
+          <label for="height">change grid height</label>
+          <input type="range" id="height" name="height" min="25" max="90" />
+          <input type="submit" id="height-submit" />
+          <input type="reset" />
+        </form>
+        <form id="gridwidth">
+          <label for="height">change grid width</label>
+          <input type="range" id="width" name="width" min="25" max="90" />
+          <input type="submit" id="width-submit" />
+          <input type="reset" />
+        </form>
+      </div>
+    </div>
+    <!-- buttons for controlling grid activity -->
     <div class="controls">
       <button id="start">start</button>
       <button id="clear">clear</button>
       <button id="random">random</button>
       <button id="speedup">speed up</button>
       <button id="slowdown">slow down</button>
-      <button id="increase">increase grid size</button>
-      <button id="decrease">decrease grid size</button>
+      <button id="color">change grid color</button>
     </div>
 
     <script src="life.js"></script>
