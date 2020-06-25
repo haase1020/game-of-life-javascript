@@ -1,6 +1,15 @@
 var rows = 50;
 var cols = 50;
 
+const heightButton = document.getElementById('gridheight');
+heightButton.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const height = document.getElementById('height').value;
+  console.log(height);
+  console.log(event.target.value);
+  changeGridSize(height);
+});
+
 let playing = false;
 let timer;
 let reproductionTime = 500;
@@ -42,6 +51,7 @@ function initialize() {
 
 // layout grid
 function createTable() {
+  console.log('createTable', cols);
   const gridContainer = document.getElementById('gridContainer');
   if (!gridContainer) {
     //error message
@@ -90,14 +100,21 @@ function updateView() {
   }
 }
 
-function changeGridSize() {
-  const heightInput = document.getElementById('height');
-  console.log('heightInput', heightInput);
-  heightInput.onclick = heightInputHandler;
+function changeGridSize(height) {
+  console.log('changegridsize', height);
+  cols = height;
+  const resetContainer = document.getElementById('gridContainer');
+  resetContainer.removeChild(resetContainer.firstChild);
+
+  console.log(resetContainer.childNodes);
+  console.log(cols);
+  createTable();
 }
 
 function heightInputHandler() {
   console.log('change grid height');
+  col += 1;
+  console.log('col in handler', col);
 }
 
 function setupControlButtons() {
