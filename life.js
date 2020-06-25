@@ -92,6 +92,7 @@ function updateView() {
 
 function changeGridSize() {
   const heightInput = document.getElementById('height');
+  console.log('heightInput', heightInput);
   heightInput.onclick = heightInputHandler;
 }
 
