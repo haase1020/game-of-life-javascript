@@ -26,6 +26,12 @@ let reproductionTime = 500;
 const grid = new Array(rows);
 const nextGrid = new Array(rows);
 
+const resetButton = document.getElementsByClassName('reset');
+resetButton[0].addEventListener('click', function (event) {
+  event.preventDefault();
+  resetEntireGrid();
+});
+
 console.log(cols);
 function initializeGrids() {
   for (let i = 0; i < rows; i++) {
@@ -114,7 +120,6 @@ function changeGridHeight(height) {
   rows = height;
   const resetContainer = document.getElementById('gridContainer');
   resetContainer.removeChild(resetContainer.firstChild);
-
   console.log(resetContainer.childNodes);
   console.log(rows);
   createTable();
@@ -125,16 +130,20 @@ function changeGridWidth(width) {
   cols = width;
   const resetContainer = document.getElementById('gridContainer');
   resetContainer.removeChild(resetContainer.firstChild);
-
   console.log(resetContainer.childNodes);
   console.log(cols);
   createTable();
 }
 
-function heightInputHandler() {
-  console.log('change grid height');
-  col += 1;
-  console.log('col in handler', col);
+function resetEntireGrid() {
+  console.log('reset grid');
+  rows = 50;
+  cols = 50;
+  const resetContainer = document.getElementById('gridContainer');
+  resetContainer.removeChild(resetContainer.firstChild);
+  console.log(resetContainer.childNodes);
+  console.log(cols, rows);
+  createTable();
 }
 
 function setupControlButtons() {
