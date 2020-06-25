@@ -7,7 +7,16 @@ heightButton.addEventListener('submit', function (event) {
   const height = document.getElementById('height').value;
   console.log(height);
   console.log(event.target.value);
-  changeGridSize(height);
+  changeGridHeight(height);
+});
+
+const widthButton = document.getElementById('gridwidth');
+widthButton.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const width = document.getElementById('width').value;
+  console.log(width);
+  console.log(event.target.value);
+  changeGridWidth(width);
 });
 
 let playing = false;
@@ -100,9 +109,20 @@ function updateView() {
   }
 }
 
-function changeGridSize(height) {
-  console.log('changegridsize', height);
-  cols = height;
+function changeGridHeight(height) {
+  console.log('changegridheight', height);
+  rows = height;
+  const resetContainer = document.getElementById('gridContainer');
+  resetContainer.removeChild(resetContainer.firstChild);
+
+  console.log(resetContainer.childNodes);
+  console.log(rows);
+  createTable();
+}
+
+function changeGridWidth(width) {
+  console.log('changegridwidth', height);
+  cols = width;
   const resetContainer = document.getElementById('gridContainer');
   resetContainer.removeChild(resetContainer.firstChild);
 
