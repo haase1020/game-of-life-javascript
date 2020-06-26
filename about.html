@@ -34,26 +34,43 @@
       </div>
       <div class="section-container">
         <h2>How the Game Works</h2>
+        <p>Conway chose his rules carefully, after considerable experimentation, to meet these criteria:
+        </p>
+        <ol>
+            <li>There should be no explosive growth.</li>
+            <li>There should exist small initial patterns with chaotic, unpredictable outcomes.</li>
+            <li>There should be potential for von Neumann universal constructors (a self-replicating machine in a cellular automata (CA) environment).</li>
+            <li>The rules should be as simple as possible, while adhering to the above constraints.</li>
+        </ol>
+        <p>The game made its first public appearance in the October 1970 issue of Scientific American, in Martin Gardner's "Mathematical Games" column. 
+            Theoretically, the Game of Life has the power of a universal Turing machine: anything that can be computed algorithmically can be computed 
+            within the Game of Life. </p>
         <div class="subsection-container">
           <h3>Cellular Automata</h3>
-          <h4>Description</h4>
-          <p></p>
-          <h4>Uses in Real Life</h4>
-          <p></p>
-          <p></p>
+          <p>A cellular automaton (pl. cellular automata, abbrev. CA) is a discrete model studied in automata theory. Cellular automata are also called 
+              cellular spaces, tessellation automata, homogeneous structures, cellular structures, tessellation structures, and iterative arrays. Cellular 
+              automata have found application in various areas, including physics, theoretical biology and microstructure modeling.</p>
+          <p>A cellular automaton consists of a regular grid of cells, each in one of a finite number of states, such as on and off 
+              (in contrast to a coupled map lattice). The grid can be in any finite number of dimensions. For each cell, a set of cells called its 
+              neighborhood is defined relative to the specified cell. An initial state (time t = 0) is selected by assigning a state for each cell.
+               A new generation is created (advancing t by 1), according to some fixed rule (generally, a mathematical function)[3] that determines 
+               the new state of each cell in terms of the current state of the cell and the states of the cells in its neighborhood. Typically, the 
+               rule for updating the state of cells is the same for each cell and does not change over time, and is applied to the whole grid simultaneously, 
+               though exceptions are known, such as the stochastic cellular automaton and asynchronous cellular automaton.</p>
+          <h3>Uses in Real Life</h3>
+          <p>CA is used in a variety of fields, including biology, chemistry, computer processing, cryptography, and modelling physical reality. </p>
         </div>
         <div class="subsection-container">
           <h3>Analyzing Turing Completeness of Conway's Game of Life</h3>
-          <h4>Description</h4>
-          <p></p>
-          <h4>Uses in Real Life</h4>
-          <p></p>
-          <p></p>
+          <p>In computability theory, a system of data-manipulation rules (such as a computer's instruction set, a programming language, or a cellular automaton) 
+              is said to be Turing-complete or computationally universal if it can be used to simulate any Turing machine. </p>
+          <p>A Turing machine is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules. Despite the model's simplicity, given any computer algorithm, a Turing machine capable of simulating that algorithm's logic can be constructed.</p>
+          <p>This means that this system is able to recognize or decide other data-manipulation rule sets. Turing completeness is used as a way to express the power of such a data-manipulation rule set. Virtually all programming languages today are Turing-complete. The concept is named after English mathematician and computer scientist Alan Turing.</p>
         </div>
         <div class="subsection-container">
           <h3>Using Double Buffering to Create the Game</h3>
-          <h4>Description</h4>
-          <p></p>
+          <p>There's a technique that's commonly used in graphics programming called double buffering. This is when we display one buffer to the user, but do work on one that's hidden from sight. In this way, the user doesn't see the buffer being generated, they only see the one that was previously completed.</p>
+        <p>When we're done doing work on the hidden buffer, we page flip and show the hidden buffer to the user. Then the previously-displayed buffer becomes the new hidden buffer, and work begins again.</p>
         </div>
       </div>
       </div>
