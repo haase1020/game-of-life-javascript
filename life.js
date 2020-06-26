@@ -3,14 +3,6 @@ var rows = 50;
 var cols = 50;
 var genCount = 0;
 
-// function updateUI() {
-//   console.log('updateUI', genCount);
-//   //update currentGeneration
-//   currentGeneration.innerHTML = `
-//   <h3 class="myGen">Current generation: ${genCount}</h3>
-//   `;
-// }
-
 const heightButton = document.getElementById('gridheight');
 heightButton.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -116,6 +108,7 @@ function updateView() {
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
       const cell = document.getElementById(i + '_' + j);
+      console.log('cell', cell);
       if (grid[i][j] == 0) {
         cell.setAttribute('class', 'dead');
       } else {
@@ -210,7 +203,7 @@ function clearButtonHandler() {
   const startButton = document.getElementById('start');
   startButton.innerHTML = 'start';
   currentGeneration.innerHTML = `
-  <h3 class="myGen">Current generation: ${genCount}</h3> 
+  <h3 class="myGen">Current generation: ${genCount}</h3>
   `;
 
   clearTimeout(timer);
@@ -245,9 +238,9 @@ function play() {
   genCount++;
   console.log(genCount);
   currentGeneration.innerHTML = `
-  <h3 class="myGen">Current generation: ${genCount}</h3> 
+  <h3 class="myGen">Current generation: ${genCount}</h3>
   `;
-
+  computeNextGen();
   if (playing) {
     timer = setTimeout(play, reproductionTime);
   }
@@ -259,7 +252,7 @@ function computeNextGen() {
       applyRules(i, j);
     }
   }
-  // copy nexGrid to grid and reset nextGrid
+  // copy nextGrid to grid and reset nextGrid
   copyAndResetGrid();
   //copy all 1 values to be live in the table
   updateView();
