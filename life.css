@@ -1,16 +1,17 @@
 body {
   padding: 20px;
-  background-color: #91b5cc;
+  background-color: #40d1a6;
 }
 #gridContainer {
   padding-bottom: 10px;
 }
 table {
-  background-color: #278dcf;
+  background-color: #0fb3e6;
   border-spacing: 0px;
+  margin: 0 auto;
 }
 td {
-  border: 1px solid#093552;
+  /* border: 1px solid#093552; */
   width: 10px;
   height: 10px;
 }
@@ -19,4 +20,9 @@ td.dead {
 }
 td.live {
   background-color: white;
+}
+.resetButtonClass {
+  margin: 5px;
+  display: flex;
+  align-content: flex-end;
 }

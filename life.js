@@ -1,5 +1,14 @@
+const currentGeneration = document.querySelector('.currentgen');
 var rows = 50;
 var cols = 50;
+
+const updateUI = (currentGeneration) => {
+  console.log(currentGeneration);
+  //update currentGeneration
+  currentGeneration.innerHTML = `
+  <h3 class="myGen">Current generation: ${currentGeneration}</h3> 
+  `;
+};
 
 const heightButton = document.getElementById('gridheight');
 heightButton.addEventListener('submit', function (event) {
@@ -227,7 +236,10 @@ function startButtonHandler() {
 }
 
 function play() {
+  let generation = 0;
   console.log('play the game');
+  generation++;
+  console.log(generation);
   computeNextGen();
 
   if (playing) {
@@ -264,7 +276,6 @@ function applyRules(row, col) {
   }
 }
 
-//verify later
 function countNeighbors(row, col) {
   let count = 0;
   if (row - 1 >= 0) {

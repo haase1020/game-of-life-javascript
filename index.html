@@ -18,8 +18,11 @@
         <input type="number" id="width" name="width" min="25" max="90" />
         <button id="widthButton">submit</button>
       </form>
-      <button class="reset">reset</button>
-      <div id="gridContainer"></div>
+      <div class="resetButtonClass">
+        <button class="reset">reset grid</button>
+      </div>
+
+      <div id="gridContainer" class="yellow"></div>
     </div>
     <!-- buttons for controlling grid activity -->
     <div class="controls">
@@ -28,9 +31,8 @@
       <button id="random">random</button>
       <button id="speedup">speed up</button>
       <button id="slowdown">slow down</button>
-      <button id="color">change grid color</button>
     </div>
-
+    <div class="currentgen"></div>
     <script src="life.js"></script>
   </body>
 </html>
