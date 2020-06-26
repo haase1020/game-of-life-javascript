@@ -1,14 +1,15 @@
 const currentGeneration = document.querySelector('.currentgen');
 var rows = 50;
 var cols = 50;
+var genCount = 0;
 
-const updateUI = (currentGeneration) => {
-  console.log(currentGeneration);
-  //update currentGeneration
-  currentGeneration.innerHTML = `
-  <h3 class="myGen">Current generation: ${currentGeneration}</h3> 
-  `;
-};
+// function updateUI() {
+//   console.log('updateUI', genCount);
+//   //update currentGeneration
+//   currentGeneration.innerHTML = `
+//   <h3 class="myGen">Current generation: ${genCount}</h3>
+//   `;
+// }
 
 const heightButton = document.getElementById('gridheight');
 heightButton.addEventListener('submit', function (event) {
@@ -205,8 +206,12 @@ function randomButtonHandler() {
 function clearButtonHandler() {
   console.log('clear the game: stop playing and clear the grid');
   playing: false;
+  genCount = 0;
   const startButton = document.getElementById('start');
   startButton.innerHTML = 'start';
+  currentGeneration.innerHTML = `
+  <h3 class="myGen">Current generation: ${genCount}</h3> 
+  `;
 
   clearTimeout(timer);
   //gets elements as node list/ so then copy as an array
@@ -236,11 +241,12 @@ function startButtonHandler() {
 }
 
 function play() {
-  let generation = 0;
   console.log('play the game');
-  generation++;
-  console.log(generation);
-  computeNextGen();
+  genCount++;
+  console.log(genCount);
+  currentGeneration.innerHTML = `
+  <h3 class="myGen">Current generation: ${genCount}</h3> 
+  `;
 
   if (playing) {
     timer = setTimeout(play, reproductionTime);
