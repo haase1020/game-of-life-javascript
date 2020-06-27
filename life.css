@@ -1,6 +1,7 @@
 body {
   padding: 20px;
   background-color: #fff;
+  font-family: 'Playfair Display', serif;
 }
 #gridContainer {
   padding-bottom: 10px;
@@ -25,4 +26,18 @@ td.live {
   margin: 5px;
   display: flex;
   align-content: flex-end;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-family: 'Playfair Display', serif;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
 }
