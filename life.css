@@ -1,13 +1,23 @@
 body {
+  margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
   font-family: 'Playfair Display', serif;
+  background-image: url('http://clipart-library.com/images/zTX5BoAKc.jpg');
+  background-size: cover;
 }
+
 #gridContainer {
   padding-bottom: 10px;
 }
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+}
 table {
-  background-color: #0fb3e6;
+  background-color: #4284e5;
   border-spacing: 0px;
   margin: 0 auto;
 }
@@ -27,17 +37,76 @@ td.live {
   display: flex;
   align-content: flex-end;
 }
-li {
-  list-style: none;
+.navbar {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.nblinks-li {
   display: inline-block;
+  list-style-type: none;
 }
 a {
   text-decoration: none;
+  color: black;
+}
+.a-navbar {
+  text-decoration: none;
+  margin: 5px 10px;
+  font-size: 2em30px;
+  color: black;
+  font-weight: 900;
 }
 button {
   font-family: 'Playfair Display', serif;
   border-radius: 20px;
+  border-color: #0fb3e6;
+  width: 120px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 5px 10px;
+  background-color: #fff;
+}
+.rules-img {
+  float: left;
+}
+footer {
+  clear: both;
+  text-align: center;
+}
+.rules {
+  line-height: 2em;
+  font-weight: 800;
+  font-size: 43px;
+}
+
+.controls {
+  text-align: center;
+}
+
+label {
+  font-size: 1.8em;
+  color: black;
+  font-weight: 900;
+}
+input {
   width: 100px;
   height: 30px;
-  font-size: 15px;
+  font-weight: 900;
+  font-size: 25px;
+  border-radius: 5px;
+}
+p {
+  font-weight: 800;
+  font-size: 25px;
+}
+li {
+  font-weight: 800;
+  font-size: 25px;
+}
+.aboutsection {
+  border: 3px solid #fff;
+  margin: 10px;
+  padding: 0 10px;
 }

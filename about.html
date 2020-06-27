@@ -10,31 +10,35 @@
   <body>
     <div class="navbar">
       <ul class="nblinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="rules.html">Rules</a></li>
+        <li class="nblinks-li"><a class="a-navbar" href="index.html">Home</a></li>
+        <li class="nblinks-li"><a class="a-navbar" href="rules.html">Rules</a></li>
+        <li class="nblinks-li">
+          <a class="a-navbar" href="references.html">References</a>
+        </li>
       </ul>
     </div>
 
     <div class="section-container">
         <h1>About Conway's Game of Life</h1>
         <p>
-          Welcome to John Conway's "Game of Life"! This is a computer science
+          Welcome to John Conway's Game of Life! This is a computer science
           classic from 1970, a program that simulates a cellular automaton
-          (plural automata). It has connections to all kinds of different
+          (plural is <em>automata</em>). It has connections to all kinds of different
           aspects of computer science and nature.
         </p>
+        <div class="aboutsection">
         <h2>Origin</h2>
         <p>In late 1940, mathematician John von Neumann defined life as a creation (as a being or organism) which can reproduce itself and simulate a 
-            Turing machine (don’t worry, I will explain what a Turing machine is below). Von Neumann was thinking about an engineering solution which 
+           <a href="#turing">Turing machine</a>. Von Neumann was thinking about an engineering solution which 
             would use electromagnetic components floating randomly in liquid or gas. This turned out not to be realistic with the technology available 
-            at the time. Mathematician and scientist Stanislaw Ulam invented cellular automata (I explain this below), which were intended to simulate 
+            at the time. Mathematician and scientist Stanislaw Ulam invented <a href="#cellularautomata">cellular automata</a>, which were intended to simulate 
             von Neumann's theoretical electromagnetic constructions. Ulam discussed using computers to simulate his cellular automata in a two-dimensional 
             lattice in several papers. In parallel, von Neumann attempted to construct Ulam's cellular automaton. Although successful, he was busy with 
             other projects and left some details unfinished. His construction was complicated because it tried to simulate his own engineering design. 
         </p>
         <p></p>
       </div>
-      <div class="section-container">
+      <div class="aboutsection">
         <h2>How the Game Works</h2>
         <p>Conway chose his rules carefully, after considerable experimentation, to meet these criteria:
         </p>
@@ -47,8 +51,9 @@
         <p>The game made its first public appearance in the October 1970 issue of Scientific American, in Martin Gardner's "Mathematical Games" column. 
             Theoretically, the Game of Life has the power of a universal Turing machine: anything that can be computed algorithmically can be computed 
             within the Game of Life. </p>
-        <div class="subsection-container">
-          <h3>Cellular Automata</h3>
+        </div>
+        <div class="aboutsection">
+          <h2 id="cellularautomata">Cellular Automata</h2>
           <p>A cellular automaton (pl. cellular automata, abbrev. CA) is a discrete model studied in automata theory. Cellular automata are also called 
               cellular spaces, tessellation automata, homogeneous structures, cellular structures, tessellation structures, and iterative arrays. Cellular 
               automata have found application in various areas, including physics, theoretical biology and microstructure modeling.</p>
@@ -62,21 +67,21 @@
           <h3>Uses in Real Life</h3>
           <p>CA is used in a variety of fields, including biology, chemistry, computer processing, cryptography, and modelling physical reality. </p>
         </div>
-        <div class="subsection-container">
-          <h3>Analyzing Turing Completeness of Conway's Game of Life</h3>
+        <div class="aboutsection">
+          <h2 id="turing">Analyzing Turing Completeness of Conway's Game of Life</h2>
           <p>In computability theory, a system of data-manipulation rules (such as a computer's instruction set, a programming language, or a cellular automaton) 
               is said to be Turing-complete or computationally universal if it can be used to simulate any Turing machine. </p>
           <p>A Turing machine is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules. Despite the model's simplicity, given any computer algorithm, a Turing machine capable of simulating that algorithm's logic can be constructed.</p>
           <p>This means that this system is able to recognize or decide other data-manipulation rule sets. Turing completeness is used as a way to express the power of such a data-manipulation rule set. Virtually all programming languages today are Turing-complete. The concept is named after English mathematician and computer scientist Alan Turing.</p>
         </div>
-        <div class="subsection-container">
-          <h3>Using Double Buffering to Create the Game</h3>
+        <div class="aboutsection">
+          <h2>Using Double Buffering to Create the Game</h2>
           <p>There's a technique that's commonly used in graphics programming called double buffering. This is when we display one buffer to the user, but do work on one that's hidden from sight. In this way, the user doesn't see the buffer being generated, they only see the one that was previously completed.</p>
         <p>When we're done doing work on the hidden buffer, we page flip and show the hidden buffer to the user. Then the previously-displayed buffer becomes the new hidden buffer, and work begins again.</p>
         </div>
       </div>
       </div>
-      <div class="section-container">
+      <div class="aboutsection">
         <h2>About John Conway</h2>
         <p>John Horton Conway (December 26, 1937 - April 11, 2020) was an English mathematician 
             acitive in the theory of finite groups, knot theory, number theory, combinatorial game theory and
