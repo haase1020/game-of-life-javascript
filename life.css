@@ -1,11 +1,15 @@
 body {
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  margin: 0;
   padding: 20px;
   font-family: 'Playfair Display', serif;
   background-image: url('http://clipart-library.com/images/zTX5BoAKc.jpg');
   background-size: cover;
 }
-
+.wrapper {
+  min-height: 100%;
+}
 #gridContainer {
   padding-bottom: 10px;
 }
@@ -49,11 +53,12 @@ td.live {
 a {
   text-decoration: none;
   color: black;
+  margin: 0.5em;
 }
 .a-navbar {
   text-decoration: none;
   margin: 5px 10px;
-  font-size: 2em30px;
+  font-size: 1em;
   color: black;
   font-weight: 900;
 }
@@ -69,20 +74,24 @@ button {
   background-color: #fff;
 }
 .rules-img {
-  float: left;
+  height: 50rem;
+  width: 50rem;
 }
 footer {
-  clear: both;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  font-size: 1em;
+  color: black;
+  font-weight: 900;
 }
+
 .rules {
-  line-height: 2em;
+  line-height: 1.7em;
   font-weight: 800;
-  font-size: 43px;
+  font-size: 1.5em;
 }
 
 .controls {
@@ -103,7 +112,7 @@ input {
 }
 p {
   font-weight: 800;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 li {
   font-weight: 800;
@@ -117,10 +126,14 @@ li {
 .references {
   text-align: center;
 }
-.p-references {
-  margin-bottom: 50px;
-}
 .currentgen {
   font-weight: 800;
   font-size: 25px;
+}
+.section-container {
+  display: flex;
+  flex-direction: column;
+}
+.rules-container {
+  display: flex;
 }
