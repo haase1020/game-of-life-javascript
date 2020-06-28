@@ -1,24 +1,34 @@
+html {
+  background: url(http://clipart-library.com/images/zTX5BoAKc.jpg) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 body {
   height: 100%;
   width: 100%;
+  margin-top: 10px;
   margin: 0;
   padding: 20px;
   font-family: 'Playfair Display', serif;
-  background-image: url('http://clipart-library.com/images/zTX5BoAKc.jpg');
-  background-size: cover;
+  /* background-image: url('http://clipart-library.com/images/zTX5BoAKc.jpg');
+  background-size: cover; */
 }
 .wrapper {
   min-height: 100%;
 }
 #gridContainer {
   padding-bottom: 10px;
+  width: 90%;
 }
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 3rem;
 }
 h2 {
-  font-size: 40px;
+  font-size: 2.5em;
 }
 table {
   background-color: #4284e5;
@@ -43,7 +53,7 @@ td.live {
 }
 .navbar {
   position: absolute;
-  right: 5px;
+  right: 0;
   top: 2px;
 }
 .nblinks-li {
@@ -62,16 +72,30 @@ a {
   color: black;
   font-weight: 900;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .a-navbar {
+    font-size: 0.7em;
+    margin: 0 auto;
+  }
+  .navbar {
+    justify-self: center;
+    margin: 0 auto;
+    left: 0;
+  }
+}
 button {
   font-family: 'Playfair Display', serif;
   border-radius: 20px;
   border-color: #0fb3e6;
-  width: 120px;
+  width: 10rem;
   height: 35px;
   font-size: 20px;
   font-weight: 800;
   margin: 5px 10px;
   background-color: #fff;
+}
+button:hover {
+  border-width: 4px;
 }
 .rules-img {
   height: 50rem;
@@ -96,6 +120,7 @@ footer {
 
 .controls {
   text-align: center;
+  width: 90%;
 }
 
 label {
@@ -122,7 +147,14 @@ li {
   border: 3px solid #fff;
   margin: 10px;
   padding: 0 10px;
+  transition: all 1s;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 4px 4px 5px #fff;
 }
+
 .references {
   text-align: center;
 }
@@ -133,7 +165,24 @@ li {
 .section-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .rules-container {
   display: flex;
 }
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gridContainer {
+  width: 40%;
+}
+/* .reference-title {
+  color: yellow;
+  font-size: 30px;
+}
+.reference-title:hover {
+  transition: all 1s;
+  transform: scale(2);
+} */
