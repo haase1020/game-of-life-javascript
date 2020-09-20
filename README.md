@@ -5,4 +5,4 @@
 [Game of Life](https://www.youtube.com/watch?v=CgOcEZinQ2I&feature=youtu.be)
 
 ## Rules for Game of Life
-[How to Play](rules.jpg)
+![How to Play](rules.jpg)
